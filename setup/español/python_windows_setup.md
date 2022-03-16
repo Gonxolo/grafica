@@ -63,16 +63,10 @@ O si se esta haciendo uso de PowerShell con el comando
 
     python-cg\Scripts\Activate.ps1
 
-Ahora continuaremos con la instalacion de los paquetes, primero debemos asegurarnos de que estamos en el directorio que contiene el archivo `requirements.txt`, de ser asi, para instalar estos paquetes usaremos el comando:
-    
-    pip install -r requirements.txt
-    
-O de manera alternativa con el comando    
+Ahora continuaremos con la instalacion de los paquetes, para instalar estos paquetes usaremos el comando: 
 
     pip install numpy scipy matplotlib ipython jupyter pyopengl glfw pillow
 
 Siempre es posible instalar cada librería por separado.
-
-Que instalara todos los paquetes que se encuentran en el archivo en sus respectivas versiones, junto con algunos paquetes que son requeridos para hacer uso de los paquetes que deseamos instalar.
  
 Y ahora se deberían poder correr todos los programas normalmente.
