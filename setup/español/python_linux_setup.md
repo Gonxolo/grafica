@@ -83,8 +83,12 @@ Instalemos algunas dependencias necesarias:
 
     sudo apt-get install python3-dev libglfw3 libglfw3-dev
 
-Ahora instalamos todas las librerias python requeridas
+Ahora instalamos todas las librerias python requeridas asegurandonos de estar en el directorio que contiene `requirements.txt`, con el comando
 
-    pip install numpy scipy matplotlib ipython jupyter pyopengl glfw pillow imgui[glfw]
+    pip install -r requirements.txt
+    
+O de manera alternativa con el comando    
+
+    pip install numpy scipy matplotlib ipython jupyter pyopengl glfw pillow
 
 Siempre es posible instalar cada librería por separado.
