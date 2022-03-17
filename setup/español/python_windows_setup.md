@@ -1,7 +1,7 @@
 # Instalación de python y librerias en Windows
 =======
 
-# Python Nativo
+# Python Nativo (Recomendado)
 
 Si usted ya tenía Python instalado con Anaconda y tuvo problemas, seguramente se trata de un problema con las variables de entorno. En ese caso, usted querrá desinstalar Python en conjunto con Anaconda. Haga esto manualmente.
 
@@ -70,3 +70,73 @@ Ahora continuaremos con la instalacion de los paquetes, para instalar estos paqu
 Siempre es posible instalar cada librería por separado.
  
 Y ahora se deberían poder correr todos los programas normalmente.
+
+
+## Instalando Anaconda (No Recomendado)
+
+⚠ Si no tiene ya instalado Anaconda prefiera seguir la instalacion de Python nativo. ⚠
+
+Anaconda Distribution, permite administrar paquetes de python de manera similar a como se realiza en linux.
+
+Primero descargue e instale anaconda python versión 3.8 en https://www.anaconda.com/products/individual#Downloads
+
+![Descarga](./captures/captura3.jpg)
+
+ Marque la segunda opción y termine la instalación
+
+
+![instalacion](./captures/captura4.jpg)
+
+Creando un environment
+----------------------
+
+Ahora necesita trabajar con la terminal de Anaconda "Anaconda Prompt" escribiendo en el buscador.
+
+![buscador](./captures/captura5.jpg)
+
+Donde se abrirá una terminal como la que se muestra
+
+![terminal](./captures/captura6.jpg)
+
+
+En dicha terminal creamos un environment ejecutando:
+
+    conda create -n python-cg
+
+Luego lo activamos con
+
+    conda activate python-cg
+
+Aparecerá (python-cg) al lado izquierdo de su prompt indicando que este es el environment activo. Puede volver al environment base con
+
+    conda activate base
+
+En cualquier momento, usted puede ver una lista con todos sus environments utilizando el comando:
+
+    conda info --envs
+
+Debiera ver una lista con 'base' y 'python-cg'.
+
+Si comete algún error, puede eliminar un environment y todas sus librerias con
+
+    conda remove --name python-cg --all
+
+y luego realizar una nueva configuración.
+
+
+Instalando las librerías necesarias
+-----------------------------------
+
+Regrese al environment python-cg, una vez ahí ejecute el siguiente comando para ver si está instalado pip:
+
+    pip
+    
+Si no arroja error o no encontrado puede seguir, de lo contrario tiene que instalar pip con el comando:
+
+    conda install pip
+    
+Ahora si puede instalar las librerías:
+
+    pip install numpy scipy matplotlib pyopengl glfw ipython jupyter pillow imgui[glfw]
+
+Es posible que se le pida actualizar algunas dependencias, ingrese 'y' para aceptar.
