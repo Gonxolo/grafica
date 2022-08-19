@@ -85,6 +85,6 @@ Instalemos algunas dependencias necesarias:
 
 Ahora instalamos todas las librerias python requeridas con el comando:
 
-    pip install numpy scipy matplotlib ipython jupyter pyopengl glfw pillow
+    pip3 install numpy scipy matplotlib ipython jupyter pyopengl glfw pillow
 
 Siempre es posible instalar cada librería por separado.
