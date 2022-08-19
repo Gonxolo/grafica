@@ -47,9 +47,9 @@ Para crear un environment con python, primero instale virtualenv con
 
 Luego cree un ambiente de python una carpeta de su home con ~/python-cg (puede utilizar otra ruta si lo desea).
 
-    python3 -venv python-cg
+    python3 -m venv ~/python-cg
 
-Si no funciona puede crear directamente la carpeta con el environment, ejecutando
+Si no funciona puede crear directamente la carpeta con el environment en el directorio actual, ejecutando
 
     python3 -m venv python-cg
 
