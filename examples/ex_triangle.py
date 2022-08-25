@@ -5,7 +5,6 @@ import glfw
 from OpenGL.GL import *
 import OpenGL.GL.shaders
 import numpy
-import sys
 
 __author__ = "Daniel Calderon"
 __license__ = "MIT"
@@ -64,14 +63,14 @@ if __name__ == "__main__":
     }
     """
 
-    # Binding artificial vertex array object for validation
-    VAO = glGenVertexArrays(1)
-    glBindVertexArray(VAO)
-
     # Assembling the shader program (pipeline) with both shaders
     shaderProgram = OpenGL.GL.shaders.compileProgram(
         OpenGL.GL.shaders.compileShader(vertex_shader, GL_VERTEX_SHADER),
         OpenGL.GL.shaders.compileShader(fragment_shader, GL_FRAGMENT_SHADER))
+
+    # Binding artificial vertex array object for validation
+    VAO = glGenVertexArrays(1)
+    glBindVertexArray(VAO)
 
     # Each shape must be attached to a Vertex Buffer Object (VBO)
     VBO = glGenBuffers(1)
@@ -109,5 +108,8 @@ if __name__ == "__main__":
 
         # Getting events from GLFW
         glfw.poll_events()
-        
-    glfw.terminate()
+
+    glDeleteBuffers(1, [VBO])
+    glDeleteVertexArrays(1, [VAO])
+
+glfw.terminate()
